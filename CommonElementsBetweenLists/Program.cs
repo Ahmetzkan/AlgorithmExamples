@@ -30,7 +30,7 @@ while (restartAgain)
             commonNumbers.Add(i);
         }
     }
-    Console.WriteLine("Ortak olan sayılar:");
+    Console.WriteLine("Common numbers:");
     foreach (var i in commonNumbers)
     {
         Console.WriteLine(i);

@@ -14,11 +14,11 @@
             //abc //cba
             bool isAnagrams = false;
 
-            char[] chars = word.ToCharArray(); //a,b,c
-            char[] chars2 = word2.ToCharArray();//c,b,a
+            char[] chars = word.ToCharArray(); 
+            char[] chars2 = word2.ToCharArray();
 
-            Array.Reverse(chars);//a,b,c
-            Array.Reverse(chars2);//a,b,c
+            Array.Reverse(chars);
+            Array.Reverse(chars2);
 
             for (int i = 0; i < chars.Length; i++)
             {
