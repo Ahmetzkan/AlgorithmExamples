@@ -1,10 +1,10 @@
 ﻿namespace Fibonacci
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            // Write a C# function to print first 100 numbers in Fibonacci series? 
+            // Write a C# function to print first 100 numbers in Fibonacci series
 
             for (int i = 1; i <= 100; i++)
             {

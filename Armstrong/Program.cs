@@ -1,37 +1,47 @@
-﻿namespace Armstrong
+﻿using System.Security.Cryptography;
+
+namespace Armstrong
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            // Write a C# program to check if the entered number is Armstrong number? 
+            // Write a C# program to check if the entered number is Armstrong number?
+            // 1+125+27 = 157 = 1'3 + 5'3 + 3'3
 
-            Console.WriteLine("Please, enter the number");
-            int number = int.Parse(Console.ReadLine());
-            Armstrong(number);
+            bool restartAgain = true;
+            while (restartAgain)
+            {
+                Console.WriteLine("Enter the number");
+                string number = Console.ReadLine();
+                Armstrong(number);
+
+                Console.WriteLine("Do you want to restart the program? (Y/N)");
+                string restart = Console.ReadLine();
+                restartAgain = (restart == "Y" || restart == "y");
+            }
         }
 
-        static void Armstrong(int getNumber)
+        static void Armstrong(string number)
         {
-            string strNumber = getNumber.ToString();
             double total = 0;
 
-            for (int i = 0; i < strNumber.Length; i++)
-            {
-                int number = int.Parse(strNumber[i].ToString());
-                double calculate = Math.Pow(number, strNumber.Length);
 
-                total += calculate;
+            for (int i = 0; i < number.Length; i++)
+            {
+                int getNumber = int.Parse(number[i].ToString());
+                total += Math.Pow(getNumber, number.Length);
             }
 
-            if (total == getNumber)
+            if (int.Parse(number) == total )
             {
-                Console.WriteLine("{0} is a Armstrong Number", getNumber);
+                Console.WriteLine("{0} is a Armstrong Number", total);
             }
             else
             {
-                Console.WriteLine("{0} is a not Armstrong Number", getNumber);
+                Console.WriteLine("{0} isn't a Armstrong Number", total);
             }
         }
     }
 }
+

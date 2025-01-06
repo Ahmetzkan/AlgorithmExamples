@@ -1,6 +1,6 @@
 ﻿namespace UniqueCharacter
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -10,7 +10,6 @@
             bool uniqueWord = true;
 
             foreach (var item in word)
-
             {
                 int count = word.Count(x => x == item);
 
